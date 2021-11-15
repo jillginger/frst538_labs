@@ -56,10 +56,10 @@ sum mc_dist3,d
 cd "$cleanpath"
 export excel using mc_demo.xlsx, first(var) replace
 save mc_demo,replace
+gwr NEAR_DIST HHSize LowIncome Bachelors MedianIncome NonOfficialLanguages ///
+Immigrants20112016, east(mc_dist1) north(mc_dist2) replace dots nolog
 
-// import this excel to Arc Pro as a table, then join with Vancouver DA
-// run 3 GWR using fake distance
-// after running GWRs in Arc Pro, import the attribute tables back in
+// how to get east/north data from attribute table? merge with GEOUID?
 
 cd "$rawpath"
 import excel using mc_GWR1,first clear 
